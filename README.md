@@ -1,4 +1,4 @@
-# A Apache Spark Scala Project Template
+# An Apache Spark Scala Project Template
 
 This project lays out a simple Apache Spark Project Template. It includes small demos for testing and logging. The license is Apache 2.0. You can read about the process of creating it below or on SparkTutorials.net
 

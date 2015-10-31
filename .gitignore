@@ -1,0 +1,12 @@
+#SBT
+project/project
+target
+*/target
+
+# Mac
+.DS_Store
+
+.ensime
+.ensime_cache
+derby.log
+metastore_db

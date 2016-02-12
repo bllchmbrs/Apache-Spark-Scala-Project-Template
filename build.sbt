@@ -36,10 +36,10 @@ resolvers += "Typesafe Simple Repository" at
 /////////// Databricks Settings
 
 // Your username to login to Databricks
-dbcUsername := sys.env("DATABRICKS-USERNAME")
+dbcUsername := sys.env("DATABRICKSUSERNAME")
 
 // Your password (Can be set as an environment variable)
-dbcPassword := sys.env("DATABRICKS-PASSWORD")
+dbcPassword := sys.env("DATABRICKSPASSWORD")
 
 // Gotcha: Setting environment variables in IDE's may differ. IDE's usually don't pick up environment variables from .bash_profile or .bashrc
 
@@ -47,13 +47,14 @@ dbcPassword := sys.env("DATABRICKS-PASSWORD")
 dbcApiUrl := "https://dogfood.staging.cloud.databricks.com/api/1.2"
 
 // Add any clusters that you would like to deploy your work to. e.g. "My Cluster"
-dbcClusters += "jason"  // Add "ALL_CLUSTERS" if you want to attach your work to all clusters
+dbcClusters += "bill-test"  // Add "ALL_CLUSTERS" if you want to attach your work to all clusters
 
 // An optional parameter to set the location to upload your libraries to in the workspace e.g. "/home/USER/libraries"
 // This location must be an existing path.
 // NOTE: Specifying this parameter is *strongly* recommended as many jars will be uploaded to your cluster.
 // Putting them in one folder will make it easy for your to delete all the libraries at once.
-dbcLibraryPath := "/home/jason@databricks.com/lib/"  // Default is "/"
+// Default is "/"
+dbcLibraryPath := "/home/bill@databricks.com/libs/"
 
 // Whether to restart the clusters everytime a new version is uploaded to Databricks.
 dbcRestartOnAttach := false // Default true

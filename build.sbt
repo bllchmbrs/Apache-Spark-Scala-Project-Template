@@ -43,7 +43,8 @@ dbcUsername := sys.env("DATABRICKSUSERNAME")
 
 // Your password (Can be set as an environment variable)
 dbcPassword := sys.env("DATABRICKSPASSWORD")
-// Gotcha: Setting environment variables in IDE's may differ. IDE's usually don't pick up environment variables from .bash_profile or .bashrc
+// Gotcha: Setting environment variables in IDE's may differ.
+// IDE's usually don't pick up environment variables from .bash_profile or .bashrc
 
 // The URL to the Databricks REST API
 dbcApiUrl := "https://dogfood.staging.cloud.databricks.com/api/1.2"

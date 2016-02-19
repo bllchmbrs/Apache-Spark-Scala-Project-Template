@@ -21,6 +21,7 @@ libraryDependencies ++= Seq(
   // testing
   "org.scalatest"   %% "scalatest"    % "2.2.4"   % "test,it",
   "org.scalacheck"  %% "scalacheck"   % "1.12.2"      % "test,it",
+
   // logging
   "org.apache.logging.log4j" % "log4j-api" % "2.4.1",
   "org.apache.logging.log4j" % "log4j-core" % "2.4.1"
@@ -31,9 +32,11 @@ resolvers += "bintray-spark-packages" at
   "https://dl.bintray.com/spark-packages/maven/"
 
 resolvers += "Typesafe Simple Repository" at
-"http://repo.typesafe.com/typesafe/simple/maven-releases/"
+ "http://repo.typesafe.com/typesafe/simple/maven-releases/"
 
-/////////// Databricks Settings
+//////////
+///// Databricks Settings
+//////////
 
 // Your username to login to Databricks
 dbcUsername := sys.env("DATABRICKSUSERNAME")
@@ -53,12 +56,14 @@ dbcClusters += "bill-test"  // Add "ALL_CLUSTERS" if you want to attach your wor
 // NOTE: Specifying this parameter is *strongly* recommended as many jars will be uploaded to your cluster.
 // Putting them in one folder will make it easy for your to delete all the libraries at once.
 // Default is "/"
-dbcLibraryPath := "/Shared/libraries/"
+dbcLibraryPath := "/Shared/Libraries/"
 
 // Whether to restart the clusters everytime a new version is uploaded to Databricks.
 dbcRestartOnAttach := false // Default true
 
-/////////// END Databricks Settings
+//////////
+///// END Databricks Settings
+//////////
 
 mainClass in (Compile, packageBin) := Some("com.github.anabranch.ExampleClass")
 

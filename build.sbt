@@ -52,8 +52,9 @@ dbcApiUrl := "https://your-sub-domain.cloud.databricks.com/api/1.2"
 // Add any clusters that you would like to deploy your work to. e.g. "My Cluster"
 dbcClusters += "my-cluster"  // Add "ALL_CLUSTERS" if you want to attach your work to all clusters
 
-// An optional parameter to set the location to upload your libraries to in the workspace e.g. "/Shared/libraries"
-// This location must be an existing path and all folders must exist
+// An optional parameter to set the location to upload your libraries to in the workspace
+// e.g. "/Shared/libraries"
+// This location must be an existing path and all folders must exist.
 // NOTE: Specifying this parameter is *strongly* recommended as many jars will be uploaded to your cluster.
 // Putting them in one folder will make it easy for your to delete all the libraries at once.
 // Default is "/"

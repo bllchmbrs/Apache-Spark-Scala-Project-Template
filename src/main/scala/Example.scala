@@ -1,6 +1,6 @@
 package net.sparktutorials.scaffold
 
-import org.apache.log4j.{Logger};
+import org.apache.log4j.Logger
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SQLContext
 

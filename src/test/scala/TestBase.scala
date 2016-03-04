@@ -15,11 +15,10 @@ abstract class BaseSpec extends FlatSpec with BeforeAndAfterAll with Matchers {
     .setAppName(appName)
     .set("spark.driver.allowMultipleContexts","true")
 
-
   override protected def beforeAll(): Unit = {
     super.beforeAll()
-    sc = new SparkContext(conf)
-    sqlContext = new SQLContext(sc)
+    sc = SparkContext.getOrCreate(conf)
+    sqlContext = SQLContext.getOrCreate(sc)
   }
 
   override protected def afterAll(): Unit = {

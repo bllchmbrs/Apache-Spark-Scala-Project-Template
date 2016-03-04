@@ -47,7 +47,7 @@ dbcPassword := sys.env("DATABRICKSPASSWORD")
 // IDE's usually don't pick up environment variables from .bash_profile or .bashrc
 
 // The URL to the Databricks REST API
-dbcApiUrl := "https://dogfood.staging.cloud.databricks.com/api/1.2"
+dbcApiUrl := "https://your-sub-domain.cloud.databricks.com/api/1.2"
 
 // Add any clusters that you would like to deploy your work to. e.g. "My Cluster"
 dbcClusters += "my-cluster"  // Add "ALL_CLUSTERS" if you want to attach your work to all clusters

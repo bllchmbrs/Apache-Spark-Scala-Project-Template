@@ -58,7 +58,7 @@ dbcClusters += "my-cluster"  // Add "ALL_CLUSTERS" if you want to attach your wo
 // NOTE: Specifying this parameter is *strongly* recommended as many jars will be uploaded to your cluster.
 // Putting them in one folder will make it easy for your to delete all the libraries at once.
 // Default is "/"
-dbcLibraryPath := "/Shared/Libraries/"
+dbcLibraryPath := "/Shared/Libraries"
 
 // Whether to restart the clusters everytime a new version is uploaded to Databricks.
 dbcRestartOnAttach := false // Default true

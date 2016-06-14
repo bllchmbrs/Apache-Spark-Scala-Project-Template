@@ -1,6 +1,6 @@
 name := "ScalaSparkTemplate" // change to project name
 organization := "com.github.anabranch" // change to your org
-version := "0.2"
+version := "0.2-SNAPSHOT"
 scalaVersion := "2.10.5"
 // Databricks uses 2.10.5 (as of 02/12/2016)
 

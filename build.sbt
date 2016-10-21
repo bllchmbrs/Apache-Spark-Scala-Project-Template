@@ -2,13 +2,13 @@ name := "ScalaSparkTemplate" // change to project name
 organization := "com.github.anabranch" // change to your org
 version := "0.2-SNAPSHOT"
 scalaVersion := "2.10.5"
+val sparkVersion = "2.0.1"
 // Databricks uses 2.10.5 (as of 02/12/2016)
 
 libraryDependencies ++= Seq(
   // spark core
-  "org.apache.spark" %% "spark-core" % "1.6.0",
-  "org.apache.spark" %% "spark-sql" % "1.6.0",
-  "org.apache.spark" %% "spark-hive" % "1.6.0" % "provided",
+  "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
+  "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
 
   // spark-modules
   // "org.apache.spark" %% "spark-graphx" % "1.6.0",
@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   // "org.apache.spark" %% "spark-streaming" % "1.6.0",
 
   // spark packages
-  "com.databricks" %% "spark-csv" % "1.3.0",
+  // "com.databricks" %% "spark-csv" % "1.3.0", // no longer necessary in 2.X
 
   // testing
   "org.scalatest"   %% "scalatest"    % "2.2.4"   % "test,it",

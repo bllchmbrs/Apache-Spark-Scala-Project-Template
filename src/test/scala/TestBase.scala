@@ -1,4 +1,4 @@
-package net.sparktutorials.scaffold
+package databricks.examples
 
 import org.scalatest._
 import org.apache.spark.{SparkConf, SparkContext}
@@ -9,7 +9,6 @@ abstract class BaseSpec extends FlatSpec with BeforeAndAfterAll with Matchers {
   private val appName = "testing"
   var sc: SparkContext = _
   var sqlContext: SQLContext = _
-
   val conf = new SparkConf()
     .setMaster(master)
     .setAppName(appName)
